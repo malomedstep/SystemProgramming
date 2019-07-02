@@ -10,27 +10,22 @@ using System.Threading.Tasks;
 namespace ThreadsConsole {
     class Program {
 
-        static void ThreadFunction(object param) {
+        static void ThreadFunction(object a) {
 
         }
 
         static void RunSeveralParallelThreads() {
-            var thread1 = new Thread(ThreadFunction);
-            var thread2 = new Thread(ThreadFunction);
-            var thread3 = new Thread(ThreadFunction);
-            thread1.Start("AAA");
-            thread2.Start("BBB");
-            thread3.Start("CCC");
+            var thr = new Thread(ThreadFunction) {
+                IsBackground = true
+            };
+            thr.Start(42);
 
-            ExecutionContext.Capture();
-            // CallContext.HostContext
-            HostExecutionContextManager a;
-
-            
+            thr.Abort();
+            thr.Join();            
         }
 
         static void Main(string[] args) {
-            Contract.Requires<Exception>(10 > 15);
+            
         }
     }
 }

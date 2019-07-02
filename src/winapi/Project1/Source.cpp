@@ -12,6 +12,15 @@ DWORD WINAPI ThreadFunction(LPVOID param) {
     return 0;
 }
 
+//// __cdecl __stdcall
+//unsigned long __stdcall ThreadFunction1(void* param) {
+//    for (INT i = 0; i < 100; ++i) {
+//        Sleep(500);
+//        printf("\tSecond thread: %d\n", i);
+//    }
+//    return 0;
+//}
+
 VOID foo(LPCWSTR path, INT offset) {
     WIN32_FIND_DATA fd;
     TCHAR mask[MAX_PATH];
@@ -48,17 +57,29 @@ VOID foo(LPCWSTR path, INT offset) {
 }
 
 int main() {
-    // foo(_T("C:\\"), 0);
+    
+
+
+    //printf("%d%d%d", 1, 2, 3);
+     foo(_T("C:\\"), 0);
 
     //  CreateThreadpoolWork()
-    HANDLE hThread = CreateThread(NULL, 0, ThreadFunction, NULL, 0, NULL);
-    for (int i = 0; i < 10; ++i) {
+    /*HANDLE hThread = CreateThread(
+        NULL, 
+        0, 
+        ThreadFunction, 
+        NULL, 
+        0, 
+        NULL
+    );
+    for (int i = 0; i < 20; ++i) {
         Sleep(100);
         printf("Main thread: %d\n", i);
     }
     WaitForSingleObject(hThread, INFINITE);
-    //TerminateThread(hThread, 0);
-
     
+    TerminateThread(hThread, 0);*/
+
+
     return 0;
 }
