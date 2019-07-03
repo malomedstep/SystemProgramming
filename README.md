@@ -6,3 +6,7 @@
 
 [Многопочность на C и Win32 API](https://www.bogotobogo.com/cplusplus/multithreading_win32A.php)
 
+---
+
+[Потребление RAM и CPU](https://dotnetcodr.com/2017/03/29/reading-the-value-of-a-performance-counter-on-windows-with-c-net-3/)
+

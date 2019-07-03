@@ -1,0 +1,64 @@
+﻿<Window x:Class="ThreadPoolWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" 
+        Height="450" 
+        Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Column="0" 
+                     Margin="10" 
+                     x:Name="Uri" 
+                     Text="{Binding DownloadUri.Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <Button Grid.Column="1" 
+                    Margin="10" 
+                    Content="Download" 
+                    Command="{Binding DownloadCommand}"/>
+        </Grid>
+        <ListBox Grid.Row="1"
+                 Margin="10" 
+                 ItemsSource="{Binding Downloads}" 
+                 HorizontalContentAlignment="Stretch">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Height="60">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" 
+                               Content="{Binding Name.Value}"/>
+                        <Grid Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="0" 
+                                  Margin="10 3">
+                                <ProgressBar Minimum="0" 
+                                             Maximum="100" 
+                                             Value="{Binding Percentage.Value}"/>
+                                <Label Content="{Binding Percentage.Value, StringFormat=Downloaded{0}%}" 
+                                       HorizontalAlignment="Center"/>
+                            </Grid>
+                            <Button Grid.Column="1" 
+                                    Content="Cancel" 
+                                    Margin="10 3" 
+                                    Padding="10 1"
+                                    Command="{Binding DataContext.CancelCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}"
+                                    CommandParameter="{Binding}"/>
+                        </Grid>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Window>
