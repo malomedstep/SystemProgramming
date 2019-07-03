@@ -1,4 +1,5 @@
-﻿using System.Runtime.Remoting.Messaging;
+﻿using System.Diagnostics;
+using System.Runtime.Remoting.Messaging;
 using System.Security;
 using System.Threading;
 using System.Threading.Tasks;
@@ -57,13 +58,20 @@ namespace ExecutionContextDemoWpf {
         //}
 
         private void Button_Click(object sender, RoutedEventArgs e) {
-            textBox.Text += $"Hello from thread {Thread.CurrentThread.ManagedThreadId}\n\n";
-            var context = SynchronizationContext.Current;
-            Task.Delay(3000).ContinueWith(task => {
-                context.Post(_ => {
-                    textBox.Text += $"Hello from thread {Thread.CurrentThread.ManagedThreadId}\n\n";
-                }, null);
-            });
+            //var procs = Process.GetProcesses();
+            //PerformanceCounter a = new PerformanceCounter($"Processor{0}", "% Processor Time", );
+            //foreach (var p in procs) {
+            //    a.
+            //}
+
+
+            //textBox.Text += $"Hello from thread {Thread.CurrentThread.ManagedThreadId}\n\n";
+            //var context = SynchronizationContext.Current;
+            //Task.Delay(3000).ContinueWith(task => {
+            //    context.Post(_ => {
+            //        textBox.Text += $"Hello from thread {Thread.CurrentThread.ManagedThreadId}\n\n";
+            //    }, null);
+            //});
         }
     }
 }
