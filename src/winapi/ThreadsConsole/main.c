@@ -67,6 +67,6 @@ int main() {
     WaitForSingleObject(hThread, INFINITE);
     //TerminateThread(hThread, 0);
 
-    
+
     return 0;
 }
