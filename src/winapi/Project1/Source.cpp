@@ -4,13 +4,7 @@
 #include <tchar.h>
 
 
-DWORD WINAPI ThreadFunction(LPVOID param) {
-    for (INT i = 0; i < 100; ++i) {
-        Sleep(500);
-        printf("\tSecond thread: %d\n", i);
-    }
-    return 0;
-}
+
 
 //// __cdecl __stdcall
 //unsigned long __stdcall ThreadFunction1(void* param) {
@@ -20,6 +14,17 @@ DWORD WINAPI ThreadFunction(LPVOID param) {
 //    }
 //    return 0;
 //}
+
+
+DWORD WINAPI ThreadFunction(void* param) {
+    int a = *((int*)param);
+    for (INT i = 0; i < 100; ++i) {
+        Sleep(500);
+        printf("\tNew thread: %d\n", a);
+    }
+    return 0;
+}
+
 
 VOID foo(LPCWSTR path, INT offset) {
     WIN32_FIND_DATA fd;
@@ -57,29 +62,26 @@ VOID foo(LPCWSTR path, INT offset) {
 }
 
 int main() {
-    
-
-
-    //printf("%d%d%d", 1, 2, 3);
-     foo(_T("C:\\"), 0);
-
-    //  CreateThreadpoolWork()
-    /*HANDLE hThread = CreateThread(
-        NULL, 
-        0, 
-        ThreadFunction, 
-        NULL, 
-        0, 
+    int threadParam1 = 42;
+    HANDLE hThread1 = CreateThread(
+        NULL,
+        0,
+        ThreadFunction,
+        &threadParam1,
+        0,
         NULL
     );
-    for (int i = 0; i < 20; ++i) {
-        Sleep(100);
-        printf("Main thread: %d\n", i);
-    }
-    WaitForSingleObject(hThread, INFINITE);
-    
-    TerminateThread(hThread, 0);*/
+    int threadParam2 = 9999;
+    HANDLE hThread2 = CreateThread(
+        NULL,
+        0,
+        ThreadFunction,
+        &threadParam2,
+        0,
+        NULL
+    );
 
+    system("pause");
 
     return 0;
 }

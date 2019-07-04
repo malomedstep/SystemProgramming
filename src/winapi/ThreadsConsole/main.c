@@ -51,7 +51,15 @@ int main() {
     // foo(_T("C:\\"), 0);
 
     //  CreateThreadpoolWork()
-    HANDLE hThread = CreateThread(NULL, 0, ThreadFunction, NULL, 0, NULL);
+    HANDLE hThread = 
+        CreateThread(
+            NULL, 
+            0, 
+            ThreadFunction, 
+            NULL, 
+            0, 
+            NULL
+        );
     for (int i = 0; i < 10; ++i) {
         Sleep(100);
         printf("Main thread: %d\n", i);
