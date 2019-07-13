@@ -7,7 +7,7 @@
         }
 
         public ActiveProperty() {
-            Value = default;
+            Value = default(T);
         }
         public ActiveProperty(T value) {
             Value = value;
