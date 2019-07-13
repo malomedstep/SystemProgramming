@@ -34,6 +34,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExecutionContextDemoWpf", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CpuUsageConsole", "src\dotnet\CpuUsageConsole\CpuUsageConsole.csproj", "{BB801BEF-FE3E-44BC-B590-9CC95AD9FB8A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager", "TaskManager\TaskManager.csproj", "{AE957EB9-0B35-4CE5-AC4C-054B874BE6F8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -158,6 +160,18 @@ Global
 		{BB801BEF-FE3E-44BC-B590-9CC95AD9FB8A}.Release|x64.Build.0 = Release|Any CPU
 		{BB801BEF-FE3E-44BC-B590-9CC95AD9FB8A}.Release|x86.ActiveCfg = Release|Any CPU
 		{BB801BEF-FE3E-44BC-B590-9CC95AD9FB8A}.Release|x86.Build.0 = Release|Any CPU
+		{AE957EB9-0B35-4CE5-AC4C-054B874BE6F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE957EB9-0B35-4CE5-AC4C-054B874BE6F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE957EB9-0B35-4CE5-AC4C-054B874BE6F8}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{AE957EB9-0B35-4CE5-AC4C-054B874BE6F8}.Debug|x64.Build.0 = Debug|Any CPU
+		{AE957EB9-0B35-4CE5-AC4C-054B874BE6F8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{AE957EB9-0B35-4CE5-AC4C-054B874BE6F8}.Debug|x86.Build.0 = Debug|Any CPU
+		{AE957EB9-0B35-4CE5-AC4C-054B874BE6F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE957EB9-0B35-4CE5-AC4C-054B874BE6F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE957EB9-0B35-4CE5-AC4C-054B874BE6F8}.Release|x64.ActiveCfg = Release|Any CPU
+		{AE957EB9-0B35-4CE5-AC4C-054B874BE6F8}.Release|x64.Build.0 = Release|Any CPU
+		{AE957EB9-0B35-4CE5-AC4C-054B874BE6F8}.Release|x86.ActiveCfg = Release|Any CPU
+		{AE957EB9-0B35-4CE5-AC4C-054B874BE6F8}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -175,6 +189,7 @@ Global
 		{39648E09-34A5-4EB3-B258-A913588D4202} = {1763E4BF-7EAC-4C72-9593-979910EF8B54}
 		{BB0DDC9C-88F8-4482-B9EB-561191ABCE24} = {1763E4BF-7EAC-4C72-9593-979910EF8B54}
 		{BB801BEF-FE3E-44BC-B590-9CC95AD9FB8A} = {1763E4BF-7EAC-4C72-9593-979910EF8B54}
+		{AE957EB9-0B35-4CE5-AC4C-054B874BE6F8} = {1763E4BF-7EAC-4C72-9593-979910EF8B54}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DE661529-3836-4ED2-BA26-AB6368CBDB96}
