@@ -4,15 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E41DDB5C-68EB-47B1-9976-AEE5B0FEA181}</ProjectGuid>
+    <ProjectGuid>{A20B4A83-8BA0-41C4-B173-BC5BBE957B21}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ContractDll</RootNamespace>
-    <AssemblyName>ContractDll</AssemblyName>
+    <RootNamespace>HakunaMatataCSharpDllConverterAwesomeInnovativeItStepAcademy</RootNamespace>
+    <AssemblyName>HakunaMatataCSharpDllConverterAwesomeInnovativeItStepAcademy</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -42,8 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IPlugin.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ContractDll\ContractDll.csproj">
+      <Project>{e41ddb5c-68eb-47b1-9976-aee5b0fea181}</Project>
+      <Name>ContractDll</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

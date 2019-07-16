@@ -12,32 +12,35 @@ namespace HostApp {
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window {
+
         List<IPlugin> modules = new List<IPlugin>();
-        public static AppDomain ad;
+
+        private AppDomain appDomain;
 
         public MainWindow() {
             InitializeComponent();
             DataContext = this;
+            // appDomain = AppDomain.CreateDomain("ext_appdomain");
         }
 
         private void Load() {
-            ad = AppDomain.CreateDomain("ext_appdomain");
+            appDomain = AppDomain.CreateDomain("ext_appdomain");
 
             var files = Directory.GetFiles("./ext", "*.dll");
 
             foreach (var item in files) {
-                var asm = ad.Load(AssemblyName.GetAssemblyName(item).FullName);
+                var asm = appDomain.Load(AssemblyName.GetAssemblyName(item).FullName);
                 var types = asm.GetExportedTypes().Where(t => {
                     return t.IsClass && typeof(IPlugin).IsAssignableFrom(t);
                 });
                 foreach (var type in types) {
-                    var agent = Activator.CreateInstance(type) as IPlugin;
-                    modules.Add(agent);
+                    var plugin = Activator.CreateInstance(type) as IPlugin;
+                    modules.Add(plugin);
                     var btn = new Button {
-                        Content = agent.Name
+                        Content = plugin.Name
                     };
                     btn.Click += (s, e) => {
-                        converted.Text = agent.Encode(text.Text, 42);
+                        converted.Text = plugin.Encode(text.Text, 42);
                     };
                     toolBar.Items.Add(btn);
                 }
@@ -46,24 +49,37 @@ namespace HostApp {
         private void Unload() {
             this.toolBar.Items.Clear();
             modules.Clear();
-            AppDomain.Unload(ad);
-            ad = null;
+            AppDomain.Unload(appDomain);
+            appDomain = null;
         }
+
 
         private void Exit_Click(object sender, RoutedEventArgs e) {
             Application.Current.Shutdown();
         }
 
         private void DisconnectButton_Click(object sender, RoutedEventArgs e) {
+            // var asms = appDomain.GetAssemblies();
             this.connectButton.IsEnabled = true;
             Unload();
             this.disconnectButton.IsEnabled = false;
         }
-
         private void ConnectButton_Click(object sender, RoutedEventArgs e) {
             this.connectButton.IsEnabled = false;
             Load();
             this.disconnectButton.IsEnabled = true;
         }
+
+        private void HakunaMatata_Click(object sender, RoutedEventArgs e) {
+            var ad = AppDomain.CreateDomain("newProc");
+            ad.ExecuteAssembly("TPL_WPF.exe");
+        }
+
+
+        //private void Foo() {
+
+
+        //}
+
     }
 }
