@@ -117,6 +117,10 @@ void Simple_demo() {
 
 
 void foo() {
+    MessageBox(NULL, _T("Shalom"), _T("Hello"), MB_YESNO);
+
+
+
     CRITICAL_SECTION cs;
     InitializeCriticalSection(&cs);
 

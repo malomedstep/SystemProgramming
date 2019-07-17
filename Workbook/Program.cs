@@ -6,14 +6,10 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Net.Http;
 using System.Linq.Expressions;
+using System.Runtime.InteropServices;
 
 namespace Workbook {
     //class Program {
-
-
-
-
-
     //    static List<int> numbers = new List<int>();
     //    static void Foo() {
     //        for (int i = 0; i < 1000; ++i) {
@@ -26,7 +22,6 @@ namespace Workbook {
     //        List<int> a = new List<int> {
     //            5,6,7,8
     //        };
-
     //        var enumerator = a.GetEnumerator();
     //        int i = 0;
     //        var version = a.GetType().GetField("_version", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic).GetValue(a);
@@ -128,15 +123,41 @@ namespace Workbook {
     }
 
     class Program {
-        static void Main(string[] args) {
-            Demo demo1 = new Demo { Number = 0 };
-            Demo demo2 = new Demo { Number = 1 };
 
-            if (demo1 && demo2) {
-                Console.WriteLine("==");
-            } else {
-                Console.WriteLine("!=");
-            }
+
+        [DllImport("user32.dll")]
+        static extern int MessageBox(
+            IntPtr hWnd,
+            string lpszText,
+            string lpszCaption,
+            int nButtons
+        );
+        
+
+        static void Main(string[] args) {
+            MessageBox(
+                IntPtr.Zero,
+                "Shalom",
+                "Hello",
+                4
+           );
+
+
+
+
+
+
+
+
+
+            //Demo demo1 = new Demo { Number = 0 };
+            //Demo demo2 = new Demo { Number = 1 };
+
+            //if (demo1 && demo2) {
+            //    Console.WriteLine("==");
+            //} else {
+            //    Console.WriteLine("!=");
+            //}
         }
     }
 }

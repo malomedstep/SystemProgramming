@@ -28,11 +28,6 @@ namespace HooksWpf {
         }
 
         private void _listener_OnKeyPressed(object sender, KeyPressedArgs e) {
-            int a = 42;
-
-            
-
-
             TextBox.Text += e.KeyPressed.ToString();
         }
 
