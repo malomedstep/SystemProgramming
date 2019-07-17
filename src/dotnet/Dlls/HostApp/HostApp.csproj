@@ -95,6 +95,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\winapi\CriticalSection\CriticalSection.vcxproj">
+      <Project>{041f9874-8843-4cfa-a067-96ed3c1b10e9}</Project>
+      <Name>CriticalSection</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CpuUsageConsole\CpuUsageConsole.csproj">
+      <Project>{bb801bef-fe3e-44bc-b590-9cc95ad9fb8a}</Project>
+      <Name>CpuUsageConsole</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ContractDll\ContractDll.csproj">
       <Project>{E41DDB5C-68EB-47B1-9976-AEE5B0FEA181}</Project>
       <Name>ContractDll</Name>

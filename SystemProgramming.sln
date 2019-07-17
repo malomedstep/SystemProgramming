@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.28922.388
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D15C8A63-B258-4537-AE90-CC2C2FF2300C}"
 	ProjectSection(SolutionItems) = preProject
@@ -61,6 +61,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContractDll", "src\dotnet\Dlls\ContractDll\ContractDll.csproj", "{E41DDB5C-68EB-47B1-9976-AEE5B0FEA181}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negative", "src\dotnet\dlls\Negative\Negative.csproj", "{F786FE82-6488-4B76-AC94-77F5F6F8C027}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hakunamatatadll", "src\dotnet\Dlls\hakunamatatadll\hakunamatatadll.vcxproj", "{E7913DBE-EEB1-49B6-8AAB-42B0D231BC4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HakunaMatataCSharpDllConverterAwesomeInnovativeItStepAcademy", "src\dotnet\dlls\HakunaMatataCSharpDllConverterAwesomeInnovativeItStepAcademy\HakunaMatataCSharpDllConverterAwesomeInnovativeItStepAcademy.csproj", "{A20B4A83-8BA0-41C4-B173-BC5BBE957B21}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HooksWpf", "src\dotnet\HooksWpf\HooksWpf.csproj", "{36CBC0D6-942D-454D-8A82-8B65D9DECFB7}"
 EndProject
@@ -352,6 +356,28 @@ Global
 		{36CBC0D6-942D-454D-8A82-8B65D9DECFB7}.Release|x64.Build.0 = Release|Any CPU
 		{36CBC0D6-942D-454D-8A82-8B65D9DECFB7}.Release|x86.ActiveCfg = Release|Any CPU
 		{36CBC0D6-942D-454D-8A82-8B65D9DECFB7}.Release|x86.Build.0 = Release|Any CPU
+		{E7913DBE-EEB1-49B6-8AAB-42B0D231BC4D}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{E7913DBE-EEB1-49B6-8AAB-42B0D231BC4D}.Debug|x64.ActiveCfg = Debug|x64
+		{E7913DBE-EEB1-49B6-8AAB-42B0D231BC4D}.Debug|x64.Build.0 = Debug|x64
+		{E7913DBE-EEB1-49B6-8AAB-42B0D231BC4D}.Debug|x86.ActiveCfg = Debug|Win32
+		{E7913DBE-EEB1-49B6-8AAB-42B0D231BC4D}.Debug|x86.Build.0 = Debug|Win32
+		{E7913DBE-EEB1-49B6-8AAB-42B0D231BC4D}.Release|Any CPU.ActiveCfg = Release|Win32
+		{E7913DBE-EEB1-49B6-8AAB-42B0D231BC4D}.Release|x64.ActiveCfg = Release|x64
+		{E7913DBE-EEB1-49B6-8AAB-42B0D231BC4D}.Release|x64.Build.0 = Release|x64
+		{E7913DBE-EEB1-49B6-8AAB-42B0D231BC4D}.Release|x86.ActiveCfg = Release|Win32
+		{E7913DBE-EEB1-49B6-8AAB-42B0D231BC4D}.Release|x86.Build.0 = Release|Win32
+		{A20B4A83-8BA0-41C4-B173-BC5BBE957B21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A20B4A83-8BA0-41C4-B173-BC5BBE957B21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A20B4A83-8BA0-41C4-B173-BC5BBE957B21}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A20B4A83-8BA0-41C4-B173-BC5BBE957B21}.Debug|x64.Build.0 = Debug|Any CPU
+		{A20B4A83-8BA0-41C4-B173-BC5BBE957B21}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A20B4A83-8BA0-41C4-B173-BC5BBE957B21}.Debug|x86.Build.0 = Debug|Any CPU
+		{A20B4A83-8BA0-41C4-B173-BC5BBE957B21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A20B4A83-8BA0-41C4-B173-BC5BBE957B21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A20B4A83-8BA0-41C4-B173-BC5BBE957B21}.Release|x64.ActiveCfg = Release|Any CPU
+		{A20B4A83-8BA0-41C4-B173-BC5BBE957B21}.Release|x64.Build.0 = Release|Any CPU
+		{A20B4A83-8BA0-41C4-B173-BC5BBE957B21}.Release|x86.ActiveCfg = Release|Any CPU
+		{A20B4A83-8BA0-41C4-B173-BC5BBE957B21}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -383,6 +409,8 @@ Global
 		{E41DDB5C-68EB-47B1-9976-AEE5B0FEA181} = {26364890-E403-4BAB-82B1-D9AD8FABA1F1}
 		{F786FE82-6488-4B76-AC94-77F5F6F8C027} = {26364890-E403-4BAB-82B1-D9AD8FABA1F1}
 		{36CBC0D6-942D-454D-8A82-8B65D9DECFB7} = {1763E4BF-7EAC-4C72-9593-979910EF8B54}
+		{E7913DBE-EEB1-49B6-8AAB-42B0D231BC4D} = {26364890-E403-4BAB-82B1-D9AD8FABA1F1}
+		{A20B4A83-8BA0-41C4-B173-BC5BBE957B21} = {26364890-E403-4BAB-82B1-D9AD8FABA1F1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DE661529-3836-4ED2-BA26-AB6368CBDB96}

@@ -11,6 +11,7 @@
             <MenuItem Header="File">
                 <MenuItem Header="Connect plugins" x:Name="connectButton" Click="ConnectButton_Click" />
                 <MenuItem Header="Disconnect plugins" x:Name="disconnectButton" Click="DisconnectButton_Click" IsEnabled="false" />
+                <MenuItem Header="HAKUNA MATATA" Click="HakunaMatata_Click"/>
                 <MenuItem Header="Exit" Click="Exit_Click"/>
             </MenuItem>
         </Menu>
